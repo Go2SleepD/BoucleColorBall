@@ -12,6 +12,15 @@ In this game i use only 5 scripts:
 5) Follow player
 
 1. PLayer
+Main script to control player's ball. Allows to jump by ball and deside what happens when ball collide 
+any object. Here public vars:
+- jumpForce. Force of jump. Float number.
+- colorYellow. String type var. Contains one of 4 color, which ball will collide. Needs to paint ball into same color
+- colorBlue. String type var. Contains one of 4 color, which ball will collide. Needs to paint ball into same color
+- colorRed. String type var. Contains one of 4 color, which ball will collide. Needs to paint ball into same color
+- colorGreen. String type var. Contains one of 4 color, which ball will collide. Needs to paint ball into same color
+- groundCheck. Coordinates of obj, where appers circle to detect how close layer, which you need.
+- whatIsGound. Layermask type. Need to detect which layer you need to detect. 
 
 2. Menu
 This script needs to make scene maenegment in game. There's only one public var:
