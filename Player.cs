@@ -46,6 +46,12 @@ public class Player : MonoBehaviour
             GetComponent<Collider2D>().isTrigger = true;        //turn off, when far
         }
     }
+     void colorSet(Color colorName)
+    {
+        GetComponent<Renderer>().material.color = colorName;      //set color
+        GetComponent<TrailRenderer>().startColor = colorName;     //set trail color
+    }
+
     void SetRandomColor()
     {
         string oldcolor = currentColor;     //var for non-repeat color switch
@@ -56,19 +62,19 @@ public class Player : MonoBehaviour
             {
                 case 0:
                     currentColor = "Yellow";        //set tag of color
-                    GetComponent<Renderer>().material.color = colorYellow;      //set color
+                    colorSet(colorYellow);
                     break;
                 case 1:
                     currentColor = "Red";
-                    GetComponent<Renderer>().material.color = colorRed;
+                    colorSet(colorRed);
                     break;
                 case 2:
                     currentColor = "Blue";
-                    GetComponent<Renderer>().material.color = colorBlue;
+                    colorSet(colorBlue);
                     break;
                 case 3:
                     currentColor = "Green";
-                    GetComponent<Renderer>().material.color = colorGreen;
+                    colorSet(colorGreen);
                     break;
             }
         }
